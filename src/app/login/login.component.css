@@ -1,0 +1,58 @@
+/* Background Image */
+.bg-image {
+  background-image: url('https://source.unsplash.com/random?coding');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Profile Image Container */
+.profile-image-container {
+  display: flex;
+  justify-content: left; /* Center the image horizontally */
+  margin-bottom: 20px; /* Space between the image and the heading */
+}
+
+/* Profile Image */
+.profile-image {
+  border-radius: 50%; /* Makes the image circular */
+  width: 100px; /* Adjust the size as needed */
+  height: 100px; /* Adjust the size as needed */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+  border: 3px solid #fff; /* Optional: adds a border around the image */
+}
+
+/* Login Form Container */
+.login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Login Heading */
+.login-heading {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Login Button */
+.btn-login {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  padding: 1rem 1.5rem;
+  background-color: #007bff;
+  border: none;
+  color: white;
+}
+
+/* Form input fields */
+input[type=email], input[type=password] {
+  border: 1px solid #ced4da;
+  padding: 0.5rem 1rem;
+}
+
+/* Error Message Styling */
+.invalid-feedback {
+  color: red;
+}

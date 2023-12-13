@@ -1,1 +1,51 @@
-<p>login works!</p>
+<div class="container-fluid ps-md-0">
+  <div class="row g-0">
+    <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto">
+              <div class="profile-image-container">
+                <img src="https://source.unsplash.com/random?pink" alt="Profile Image" class="profile-image">
+              </div>
+              <h3 class="login-heading mb-1">SE CONNECTER</h3>
+              <p>Welcome back! Veuillez entrer vos coordonnées.</p>
+              <br>
+              <br>
+              <!-- Sign In Form -->
+              <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+                <p>Email</p>
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                  <label for="floatingInput">Tapez votre mail</label>
+                  <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                  </div>
+                </div>
+
+                <p>Mot de passe</p>
+                <div class="form-floating">
+                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                  <label for="floatingPassword">Tapez votre mot de passe</label>
+                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                  </div>
+                </div>
+                <br>
+                <br>
+                <br>
+
+                <div class="d-grid">
+                  <button routerLink="/main-page" class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Se connecter</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
