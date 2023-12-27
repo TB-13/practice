@@ -1,0 +1,55 @@
+<div class="dashboard-container">
+  <section class="demand-summary">
+    <h2>MES DEMANDES</h2>
+    <p>Récapitulatif des demandes</p>
+    <div class="summary-cards">
+      <!-- Card for "En attente de traitement" -->
+      <div class="card">
+        <div class="card-content">
+          <span class="card-number">04</span>
+          <span class="card-text">En attente de traitement</span>
+        </div>
+      </div>
+      <!-- Card for "En cours de traitement" -->
+      <div class="card">
+        <div class="card-content">
+          <span class="card-number">01</span>
+          <span class="card-text">En cours de traitement</span>
+        </div>
+      </div>
+      <!-- Card for "Total des demandes" -->
+      <div class="card">
+        <div class="card-content">
+          <span class="card-number">24</span>
+          <span class="card-text">Total des demandes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="internal-services">
+    <h2>SERVICES INTERNES</h2>
+    <p>Soumissionnez votre demande</p>
+    <form class="service-form">
+      <div class="form-group">
+        <label for="service-type">Type de services*</label>
+        <select id="service-type">
+          <option>Choisissez le type de service</option>
+          <!-- Additional options -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="category">Catégorie*</label>
+        <select id="category">
+          <option>Choisissez une catégorie</option>
+          <!-- Additional options -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="comment">Commentaire*</label>
+        <textarea id="comment" placeholder="Donnez une explication ici..."></textarea>
+      </div>
+      <button type="submit">ENVOYER</button>
+    </form>
+  </section>
+</div>

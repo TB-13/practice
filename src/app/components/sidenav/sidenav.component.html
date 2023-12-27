@@ -1,0 +1,125 @@
+<mat-sidenav-container class="sidenav-container">
+
+  <!-- Left Sidebar -->
+  <mat-sidenav opened mode="side" class="sidenav" id="left-sidenav">
+    <!-- Logo -->
+    <div class="logo" id="logo">
+      <img src="https://source.unsplash.com/random?pink" alt="User Logo" class="logo-image">
+    </div>
+    <!-- Navigation List -->
+    <mat-nav-list id="left-nav-list">
+      <!-- Dashboard Link -->
+      <a mat-list-item [routerLink]="['dashboard']" routerLinkActive="list-item-active" id="dashboard-link">
+        <mat-icon mat-list-icon>dashboard</mat-icon>
+        <div class="list-text">Tableau de bord</div>
+        <mat-icon mat-arrow-icon>keyboard_arrow_right</mat-icon>
+      </a>
+      <!-- Requests Link -->
+      <a mat-list-item [routerLink]="['demandes']" routerLinkActive="list-item-active" id="requests-link">
+        <mat-icon mat-list-icon>assignment</mat-icon>
+        <div class="list-text">Demande en cour</div>
+        <mat-icon mat-arrow-icon>keyboard_arrow_right</mat-icon>
+      </a>
+      <!-- More items... -->
+    </mat-nav-list>
+    <!-- User Profile -->
+    <div class="user-profile" id="user-profile">
+      <img src="https://source.unsplash.com/random?pink" alt="User Name" class="user-image">
+      <div>
+        <div class="user-name">Zouhir Abdou</div>
+        <div class="user-description">Responsable achat et logistique</div>
+      </div>
+    </div>
+  </mat-sidenav>
+
+  <!-- Main Content and Top Search Bar -->
+  <mat-sidenav-content id="main-content">
+    <!-- Search Bar -->
+    <div class="search-bar-container" id="search-bar">
+      <mat-toolbar color="transparent">
+        <mat-form-field>
+          <mat-icon matPrefix class="mat-search-icon">search</mat-icon>
+          <input matInput placeholder="Rechercher ici">
+        </mat-form-field>
+      </mat-toolbar>
+    </div>
+    <router-outlet></router-outlet>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        2024 Powered by CDG Branche Epargne et Prevoyance
+      </div>
+    </footer>
+  </mat-sidenav-content>
+
+  <!-- Right Sidebar -->
+  <mat-sidenav opened mode="side" position="end" class="right-sidebar" id="right-sidenav">
+    <!-- Header with user options -->
+    <div class="right-sidebar-header" id="right-sidebar-header">
+      <!-- User Options -->
+      <div class="sidebar-item" id="support-option">
+        <mat-icon>support</mat-icon>
+        <span>Support</span>
+      </div>
+      <div class="sidebar-item" id="notifications-option">
+        <mat-icon>notifications</mat-icon>
+        <span>Notifications</span>
+      </div>
+      <div class="sidebar-item" id="settings-option">
+        <mat-icon>settings</mat-icon>
+        <span>Paramètres</span>
+      </div>
+      <div class="sidebar-item" id="logout-option">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Se déconnecter</span>
+      </div>
+    </div>
+
+    <!-- Calendar section -->
+    <div class="right-sidebar-section" id="calendar-section">
+      <div class="right-sidebar-title">
+        <mat-icon>event</mat-icon>
+        <span>CALENDRIER</span>
+        <span>Lorem ipsum dolor sit amet</span>
+      </div>
+      <!-- Calendar Content -->
+    </div>
+
+    <!-- Event list -->
+    <div class="event-list" id="event-list">
+      <!-- Individual Event -->
+      <div class="event-item" id="event-item-1">
+        <div class="event-date">
+          <span class="event-day">05</span>
+          <span class="event-month">Juillet</span>
+        </div>
+        <div class="event-details">
+          <span class="event-title">SALLE DE RÉUNION 05</span>
+          <span class="event-time">De 10h22 à 11h50</span>
+          <span class="event-extra">Service boisson inclus</span>
+        </div>
+      </div>
+      <!-- More events... -->
+    </div>
+
+    <!-- Bottom section for additional actions -->
+    <div class="right-sidebar-footer" id="right-sidebar-footer">
+      <!-- Action Items -->
+      <div class="sidebar-item" id="new-request-option">
+        <mat-icon>add_circle_outline</mat-icon>
+        <span>Nouvelle demande</span>
+      </div>
+      <div class="sidebar-item" id="new-booking-option">
+        <mat-icon>add_circle_outline</mat-icon>
+        <span>Nouvelle réservation</span>
+      </div>
+      <div class="sidebar-item" id="internal-services-option">
+        <mat-icon>build_circle</mat-icon>
+        <span>Services internes</span>
+      </div>
+    </div>
+  </mat-sidenav>
+
+</mat-sidenav-container>
+

@@ -1,0 +1,320 @@
+/* Defining color variables for easy theme management */
+:root {
+  --cdg-blue: #e10000;
+  --cdg-green: #638c1c;
+  --royal-grey: #d8e0e5;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+/* Sidenav container styles */
+/* Flexbox setup for the main container */
+.sidenav-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+}
+
+/* Main content styling */
+mat-sidenav-content {
+  margin-left: 300px; /* Offset for the left sidebar */
+  margin-right: 300px; /* Offset for the right sidebar */
+  margin-bottom: 100px;
+  top: 90px; /* Height of the fixed search bar */
+  overflow-y: auto; /* Allow scrolling within the main content */
+}
+
+/* Search bar styling */
+mat-toolbar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar-container {
+  margin-left: 30px;
+  margin-bottom: 20px;
+  left: 300px; /* Align with the left sidebar */
+  right: 350px; /* Align with the right sidebar */
+  height: 50px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  z-index: 1000;
+  background-size: 600px;
+  background-color: #cccccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mat-form-field-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.mat-search-icon {
+  margin-right: 10px;
+  color: var(--cdg-blue);
+}
+
+.mat-form-field {
+  flex: 1;
+  margin-left: 10px;
+  outline-color: transparent;
+}
+
+/* Left sidebar styling */
+.mat-sidenav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  padding-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  z-index: 2; /* Higher than main content but lower than search bar */
+}
+
+.logo-image {
+  display: block;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 160px;
+  height: 80px;
+}
+
+.mat-nav-list {
+  padding-bottom: 80px;
+}
+
+.mat-list-item {
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+  font-size: 16px;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+.list-text {
+  flex: 1;
+  margin-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mat-list-icon {
+  color: var(--cdg-blue);
+}
+
+.mat-arrow-icon {
+  margin-left: auto;
+}
+
+.list-item-active {
+  color: var(--cdg-blue);
+  background-color: var(--royal-grey);
+}
+
+.user-profile {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.user-image {
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.user-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.user-description {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Right sidebar styles */
+.right-sidebar {
+  width: 350px;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Top section layout - align items next to each other */
+.right-sidebar-header {
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  justify-content: space-around; /* Evenly space the items */
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Adjust individual top section items */
+.right-sidebar-header .sidebar-item {
+  flex-direction: column; /* Horizontal layout */
+  align-items: center; /* Center items vertically */
+  padding: 5px; /* Adjust padding as needed */
+}
+
+/* Adjust icon and text alignment in the top section */
+.right-sidebar-header .sidebar-item mat-icon,
+.right-sidebar-header .sidebar-item span {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Calendar section in the right sidebar */
+.right-sidebar-section {
+  padding: 15px;
+  text-align: center; /* Center the calendar title and icon */
+}
+
+.right-sidebar-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0; /* Spacing around the title */
+}
+
+.right-sidebar-title mat-icon {
+  font-size: 24px; /* Larger icon for the calendar */
+  margin-bottom: 4px; /* Space between icon and title */
+}
+
+.right-sidebar-content {
+  font-size: 14px;
+  color: #7d7d7d;
+  margin-bottom: 20px;
+}
+
+/* Styles for the event list */
+.event-list {
+  margin-bottom: 20px;
+}
+
+.event-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.event-date {
+  margin-right: 15px;
+}
+
+.event-day {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  color: #333;
+}
+
+.event-month {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #7d7d7d;
+}
+
+.event-details {
+  border-left: 2px solid #d8e0e5;
+  padding-left: 15px;
+}
+
+.event-title {
+  font-weight: bold;
+  color: #333;
+  margin: 5px 0;
+}
+
+.event-time,
+.event-extra {
+  font-size: 14px;
+  color: #7d7d7d;
+}
+
+.right-sidebar-section .right-sidebar-title {
+  display: flex;
+  flex-direction: column; /* Stack icon and title vertically */
+  align-items: flex-start; /* Center items */
+  margin-bottom: 10px; /* Space below the title */
+}
+
+.right-sidebar-section .right-sidebar-title mat-icon {
+  margin-right: 8px; /* Space between icon and title text */
+}
+
+/* Footer (bottom section) alignment */
+.right-sidebar-footer {
+  padding: 15px;
+  position: absolute; /* Make the footer stick to the bottom */
+  bottom: 0; /* Align to the bottom */
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Adjust box-sizing */
+}
+
+/* Footer items alignment */
+.right-sidebar-footer .sidebar-item {
+  flex-direction: row; /* Horizontal layout */
+  align-items: center; /* Center items vertically */
+  justify-content: start; /* Align items to the left */
+}
+
+.right-nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.sidebar-item mat-icon {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.sidebar-item span {
+  font-size: 12px;
+}
+
+#main-content {
+  flex: 1; /* This will make the main content grow and push the footer down */
+}
+
+
+.site-footer {
+  position: fixed; /* Fixed to the bottom */
+  left: 300px; /* Align with the left sidebar */
+  right: 350px;
+  bottom: 0;
+  background-color: #ffffff; /* Footer background */
+  color: #000000; /* Footer text color */
+  text-align: center; /* Center the text */
+  padding: 10px 0; /* Padding */
+  z-index: 2; /* Above the main content */
+}
+
+

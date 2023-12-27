@@ -3,23 +3,38 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { LoginModule } from "./login/login.module";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import {MainPageModule} from "./main-page/main-page.module";
-import { SidenavComponent } from './sidenav/sidenav.component';
-
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {RouterModule} from "@angular/router";
+import {LoginComponent} from "./pages/login/login.component";
+import {MatDividerModule} from "@angular/material/divider";
+import {MatIconModule} from "@angular/material/icon";
+import {MatListModule} from "@angular/material/list";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 @NgModule({
   declarations: [
     AppComponent,
-    SidenavComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
-    LoginModule,
+    RouterModule,
     FontAwesomeModule,
-    MainPageModule
+    MatSidenavModule,
+    MatDividerModule,
+    MatIconModule,
+    MatListModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   exports: [

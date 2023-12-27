@@ -1,16 +1,37 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainPageComponent } from './main-page/main-page.component';
-import { LoginComponent } from './login/login.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { SidenavModule } from './components/sidenav/sidenav.module';
+import {LoginComponent} from "./pages/login/login.component";
+
 
 const routes: Routes = [
-  {component : LoginComponent, path:''},
-  {component : MainPageComponent, path:'main-page'},
-
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  {
+    path: 'sidenav',
+    component: SidenavComponent,
+    children: [
+      {
+        path: 'dashboard',
+        loadChildren: () =>
+          import('./pages/dashboard/dashboard.module').then(
+            m=>m.DashboardModule
+          )
+      },
+      {
+        path: 'demandes',
+        loadChildren: () =>
+          import('./pages/demandes/demandes.module').then(
+            m=>m.DemandesModule
+          )
+      },
+    ]
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), SidenavModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,0 +1,88 @@
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.demand-summary, .internal-services {
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.summary-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-number {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  margin-top: 10px;
+}
+
+.service-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.service-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-form label {
+  margin-bottom: 5px;
+}
+
+.service-form select, .service-form textarea, .service-form button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.service-form textarea {
+  resize: vertical;
+}
+
+.service-form button {
+  background-color: #323e48;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.site-footer {
+  background-color: #323e48;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  margin: 0 auto;
+  max-width: 1200px;
+}
